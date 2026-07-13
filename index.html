@@ -3,581 +3,406 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Owls East Dallas Baseball Club | 14U</title>
+<title>Dallas Owls | Preparing Players for School Baseball</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #16223f;
-    --navy-dark: #0e1730;
-    --light-blue: #a9c4dd;
-    --pale-blue: #eef4fa;
-    --text: #2b3550;
-    --muted: #6b7690;
-    --gold: #d9a441;
+    --navy: #172430;
+    --carolina: #79A1B2;
+    --white: #FFFFFF;
+    --bg: #F5F7FA;
+    --text: #2E3742;
+    --muted: #6B7684;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
   body {
-    font-family: 'Inter', Arial, sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     color: var(--text);
-    background: #ffffff;
-    line-height: 1.6;
-  }
-  h1, h2, h3, .brand {
-    font-family: 'Poppins', Arial, sans-serif;
+    background: var(--white);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
   }
   a { text-decoration: none; color: inherit; }
-  img { max-width: 100%; display: block; }
-  .container { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 0 32px; }
 
-  /* NAV */
-  header.site-nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
+  header {
     background: var(--navy);
-    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    padding: 20px 0;
   }
-  .nav-inner {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 16px 32px;
+  .nav-row {
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
-  .brand {
-    color: #fff;
-    font-weight: 800;
-    font-size: 22px;
-    letter-spacing: 1px;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
+  .mark {
+    color: var(--white);
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 1.5px;
   }
-  .brand span {
-    font-weight: 400;
+  .navlinks { display: flex; gap: 36px; }
+  .navlinks a {
+    color: rgba(255,255,255,0.72);
     font-size: 13px;
-    color: var(--light-blue);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.3px;
   }
-  nav.links {
-    display: flex;
-    gap: 34px;
-  }
-  nav.links a {
-    color: #dbe6f2;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-  nav.links a:hover { color: var(--gold); }
+  .navlinks a:hover { color: var(--white); }
 
-  /* HERO */
   .hero {
     position: relative;
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-    color: #fff;
+    background: var(--navy);
+    padding: 130px 0 110px;
     overflow: hidden;
-    padding: 110px 0 100px;
   }
-  .hero::before {
-    content: "";
+  .pinstripes {
     position: absolute;
-    top: -150px;
-    right: -180px;
-    width: 700px;
-    height: 700px;
-    background: repeating-linear-gradient(
-      -45deg,
-      transparent 0px, transparent 46px,
-      rgba(169,196,221,0.14) 46px, rgba(169,196,221,0.14) 74px
+    inset: 0;
+    background-image: repeating-linear-gradient(
+      90deg,
+      transparent 0px, transparent 39px,
+      rgba(121,161,178,0.14) 39px, rgba(121,161,178,0.14) 40px
     );
-    border-radius: 50%;
   }
   .hero-inner {
     position: relative;
-    z-index: 2;
-    max-width: 1120px;
+    max-width: 720px;
     margin: 0 auto;
-    padding: 0 32px;
     text-align: center;
+    padding: 0 32px;
   }
-  .hero-eyebrow {
-    display: inline-block;
-    padding: 7px 18px;
-    background: rgba(169,196,221,0.15);
-    border: 1px solid rgba(169,196,221,0.4);
-    border-radius: 30px;
-    font-size: 13px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--light-blue);
-    margin-bottom: 26px;
+  .hero-wordmark {
+    color: var(--white);
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
+  }
+  .eyebrow {
+    color: var(--carolina);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
   }
   .hero h1 {
-    font-size: 64px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    line-height: 1.05;
-    margin-bottom: 18px;
+    color: var(--white);
+    font-size: 46px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+    margin-bottom: 22px;
   }
-  .hero h1 em {
-    font-style: normal;
-    color: var(--gold);
+  .hero p {
+    color: rgba(255,255,255,0.68);
+    font-size: 17px;
+    margin-bottom: 40px;
   }
-  .hero p.lead {
-    font-size: 19px;
-    color: #c9d6e8;
-    max-width: 620px;
-    margin: 0 auto 38px;
-  }
-  .hero-ctas {
-    display: flex;
-    gap: 18px;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+  .btn-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
   .btn {
     display: inline-block;
-    padding: 15px 32px;
-    border-radius: 6px;
-    font-weight: 700;
+    padding: 13px 26px;
     font-size: 14px;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    transition: transform 0.15s, box-shadow 0.15s;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: opacity 0.15s;
   }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary {
-    background: var(--gold);
-    color: var(--navy-dark);
-  }
-  .btn-primary:hover { box-shadow: 0 8px 20px rgba(217,164,65,0.35); }
-  .btn-outline {
-    border: 2px solid rgba(255,255,255,0.5);
-    color: #fff;
-  }
-  .btn-outline:hover { border-color: #fff; }
+  .btn:hover { opacity: 0.85; }
+  .btn-fill { background: var(--carolina); color: var(--navy); }
+  .btn-line { border: 1px solid rgba(255,255,255,0.35); color: var(--white); }
 
-  .photo-placeholder {
-    margin-top: 60px;
-    background: rgba(255,255,255,0.05);
-    border: 2px dashed rgba(255,255,255,0.35);
-    border-radius: 10px;
-    padding: 70px 20px;
-    color: rgba(255,255,255,0.55);
-    font-size: 14px;
-    letter-spacing: 0.5px;
-  }
-
-  /* SECTION HEADER */
-  .section { padding: 90px 0; }
-  .section-alt { background: var(--pale-blue); }
-  .section-head {
-    text-align: center;
-    margin-bottom: 56px;
-  }
-  .section-tag {
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 10px;
-  }
+  .section { padding: 96px 0; }
+  .section-alt { background: var(--bg); }
+  .section-head { max-width: 560px; margin: 0 auto 56px; text-align: center; }
   .section-head h2 {
-    font-size: 38px;
-    font-weight: 800;
-    color: var(--navy);
-  }
-  .section-head p {
-    color: var(--muted);
-    max-width: 560px;
-    margin: 14px auto 0;
-    font-size: 16px;
-  }
-
-  /* ABOUT */
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-  }
-  .about-photo {
-    aspect-ratio: 4/3;
-    background: var(--pale-blue);
-    border: 2px dashed #c3d5e8;
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--muted);
-    font-size: 14px;
-    text-align: center;
-    padding: 20px;
-  }
-  .about-text h3 {
-    font-size: 26px;
-    color: var(--navy);
-    margin-bottom: 16px;
-  }
-  .about-text p {
-    color: var(--muted);
-    margin-bottom: 16px;
-    font-size: 16px;
-  }
-  .stat-row {
-    display: flex;
-    gap: 40px;
-    margin-top: 28px;
-  }
-  .stat-row div strong {
-    display: block;
     font-size: 30px;
-    font-weight: 800;
-    color: var(--navy);
-    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.3px;
+    margin-bottom: 12px;
   }
-  .stat-row div span {
-    font-size: 13px;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-  }
+  .section-head p { color: var(--muted); font-size: 15.5px; }
 
-  /* COACHES */
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+  .pillar span {
+    display: block;
+    color: var(--carolina);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+  .pillar h3 { font-size: 16.5px; font-weight: 600; margin-bottom: 10px; }
+  .pillar p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+
   .coach-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-  .coach-card {
-    background: #fff;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 6px 24px rgba(22,34,63,0.08);
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .coach-card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 14px 32px rgba(22,34,63,0.14);
+    gap: 44px;
   }
   .coach-photo {
-    height: 210px;
-    background: linear-gradient(135deg, var(--navy) 0%, #26365e 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--light-blue);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 800;
-    font-size: 48px;
-    position: relative;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 6px;
+    background: linear-gradient(150deg, var(--navy) 0%, var(--carolina) 130%);
+    margin-bottom: 20px;
   }
-  .coach-photo .add-photo {
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-  }
-  .coach-body { padding: 26px 26px 30px; }
-  .coach-role {
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 6px;
-  }
-  .coach-body h3 {
-    font-size: 21px;
-    color: var(--navy);
-    margin-bottom: 10px;
-  }
-  .coach-tag {
-    display: inline-block;
-    font-size: 12px;
-    font-weight: 600;
-    color: #5c7aa8;
-    background: var(--pale-blue);
-    padding: 5px 12px;
-    border-radius: 20px;
-    margin-bottom: 14px;
-  }
-  .coach-body p {
-    font-size: 14.5px;
-    color: var(--muted);
-  }
+  .coach h3 { font-size: 17px; font-weight: 600; margin-bottom: 2px; }
+  .coach .role { color: var(--carolina); font-size: 12.5px; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 12px; display: block; }
+  .coach p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+  .coach .cred { display: block; margin-top: 10px; font-size: 12px; color: #9AA4AF; }
+  .coach-note { text-align: center; color: var(--muted); font-size: 14px; margin-top: 48px; max-width: 480px; margin-left: auto; margin-right: auto; }
 
-  /* TRYOUTS */
-  .tryouts-box {
-    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
-    border-radius: 16px;
-    padding: 60px;
-    color: #fff;
+  .practices-grid {
     display: grid;
     grid-template-columns: 1.1fr 1fr;
-    gap: 50px;
-    align-items: center;
+    gap: 60px;
+    align-items: start;
   }
-  .tryouts-box h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
-  }
-  .tryouts-box p.desc {
-    color: #c9d6e8;
-    margin-bottom: 26px;
-    font-size: 15.5px;
-  }
-  .detail-row {
-    display: flex;
-    gap: 14px;
-    margin-bottom: 16px;
-    font-size: 15px;
-  }
-  .detail-row .icon {
-    width: 34px;
-    height: 34px;
-    min-width: 34px;
-    border-radius: 8px;
-    background: rgba(169,196,221,0.15);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-  }
-  .dates-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 12px;
-    padding: 28px;
-  }
-  .dates-card h4 {
-    font-size: 13px;
+  .practices-list h4, .bring-list h4 {
+    font-size: 12px;
+    font-weight: 600;
     letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--light-blue);
-    margin-bottom: 16px;
+    color: var(--carolina);
+    margin-bottom: 18px;
   }
-  .date-line {
+  .date-row {
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 13px 0;
+    border-bottom: 1px solid #E4E9EE;
     font-size: 15px;
   }
-  .date-line:last-child { border-bottom: none; }
-  .date-line span:first-child { color: #fff; font-weight: 600; }
-  .date-line span:last-child { color: #b9c8dd; }
-  .contact-cta {
-    margin-top: 22px;
-    text-align: center;
-    background: var(--gold);
-    color: var(--navy-dark);
-    font-weight: 700;
-    padding: 14px;
-    border-radius: 8px;
-    font-size: 15px;
+  .date-row span:last-child { color: var(--muted); }
+  .bring-list { margin-top: 36px; }
+  .bring-list ul { list-style: none; }
+  .bring-list li {
+    font-size: 14.5px;
+    color: var(--text);
+    padding: 6px 0;
   }
+  .bring-list li::before { content: "— "; color: var(--carolina); }
+  .info-line { font-size: 14.5px; margin-bottom: 8px; }
+  .info-line strong { font-weight: 600; }
+  .map-box {
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #E4E9EE;
+    height: 320px;
+  }
+  .map-box iframe { width: 100%; height: 100%; border: 0; filter: grayscale(0.15); }
 
-  /* CONTACT / FOOTER */
-  footer {
-    background: var(--navy-dark);
-    color: #b9c8dd;
-    padding-top: 70px;
-  }
-  .footer-grid {
+  .gallery {
     display: grid;
-    grid-template-columns: 1.3fr 1fr 1fr;
-    gap: 50px;
-    padding-bottom: 50px;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
   }
-  .footer-grid h4 {
-    color: #fff;
-    font-size: 15px;
-    margin-bottom: 18px;
+  .gallery-tile {
+    aspect-ratio: 4/3;
+    background: linear-gradient(150deg, var(--navy), var(--carolina));
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    position: relative;
+  }
+  .gallery-tile:nth-child(2) { background: linear-gradient(150deg, #23374a, var(--carolina)); }
+  .gallery-tile:nth-child(3) { background: linear-gradient(150deg, var(--navy), #9db8c4); }
+  .gallery-tile:nth-child(4) { background: linear-gradient(150deg, #1c2c3a, var(--carolina)); }
+  .gallery-tile:nth-child(5) { background: linear-gradient(150deg, var(--navy), #8fadbb); }
+  .gallery-tile span {
+    color: rgba(255,255,255,0.85);
+    font-size: 12px;
+    font-weight: 500;
     letter-spacing: 0.5px;
   }
-  .footer-grid p, .footer-grid a {
-    font-size: 14px;
-    color: #93a4c0;
-    display: block;
-    margin-bottom: 10px;
-  }
-  .footer-grid a:hover { color: var(--light-blue); }
-  .footer-bottom {
-    text-align: center;
-    padding: 24px 0;
-    font-size: 13px;
-    color: #6b7fa0;
-  }
 
-  @media (max-width: 880px) {
-    nav.links { display: none; }
-    .hero h1 { font-size: 42px; }
-    .about-grid { grid-template-columns: 1fr; }
+  .contact-box {
+    background: var(--navy);
+    border-radius: 8px;
+    padding: 64px;
+    text-align: center;
+  }
+  .contact-box h2 { color: var(--white); font-size: 28px; font-weight: 600; margin-bottom: 14px; }
+  .contact-box p { color: rgba(255,255,255,0.65); font-size: 15.5px; margin-bottom: 32px; }
+
+  footer {
+    background: var(--navy);
+    padding: 40px 0;
+    text-align: center;
+  }
+  footer p { color: rgba(255,255,255,0.4); font-size: 13px; }
+
+  @media (max-width: 860px) {
+    .pillars { grid-template-columns: 1fr 1fr; }
     .coach-grid { grid-template-columns: 1fr; }
-    .tryouts-box { grid-template-columns: 1fr; padding: 36px 26px; }
-    .footer-grid { grid-template-columns: 1fr; }
+    .practices-grid { grid-template-columns: 1fr; }
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+    .navlinks { display: none; }
+    .hero h1 { font-size: 32px; }
+    .hero-wordmark { font-size: 24px; letter-spacing: 3px; }
   }
 </style>
 </head>
 <body>
 
-  <header class="site-nav">
-    <div class="nav-inner">
-      <a href="#top" class="brand">OWLS <span>East Dallas Baseball Club</span></a>
-      <nav class="links">
-        <a href="#about">About</a>
+  <header>
+    <div class="wrap nav-row">
+      <a href="#top" class="mark">DALLAS OWLS</a>
+      <nav class="navlinks">
         <a href="#coaches">Coaches</a>
-        <a href="#tryouts">Tryouts</a>
+        <a href="#practices">Practices</a>
+        <a href="#gallery">Gallery</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
 
   <section class="hero" id="top">
+    <div class="pinstripes"></div>
     <div class="hero-inner">
-      <div class="hero-eyebrow">14U Travel Baseball &bull; East Dallas, TX</div>
-      <h1>OWLS <em>BASEBALL</em><br>EAST DALLAS</h1>
-      <p class="lead">Building great ballplayers and great people. Coached by athletes who played the game at a professional and elite college level.</p>
-      <div class="hero-ctas">
-        <a href="#tryouts" class="btn btn-primary">Register for Tryouts</a>
-        <a href="#coaches" class="btn btn-outline">Meet the Coaches</a>
-      </div>
-      <div class="photo-placeholder">
-        [ Team photo goes here &mdash; drop in your favorite Owls team or action shot ]
+      <div class="hero-wordmark">DALLAS OWLS</div>
+      <div class="eyebrow">14U BASEBALL</div>
+      <h1>Preparing players for school baseball.</h1>
+      <p>Competitive instruction. Positive coaching. Genuine community.</p>
+      <div class="btn-row">
+        <a href="#practices" class="btn btn-fill">Attend an Open Practice</a>
+        <a href="#coaches" class="btn btn-line">Meet the Coaches</a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="about">
-    <div class="container about-grid">
-      <div class="about-photo">
-        [ Add an action photo or team huddle shot here ]
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Why families choose the Owls</h2>
+        <p>We're not chasing trophies. We're building the players and people these boys become.</p>
       </div>
-      <div class="about-text">
-        <div class="section-tag">Who We Are</div>
-        <h3>Player development, on and off the field</h3>
-        <p>Owls East Dallas Baseball Club is a 14U travel program built on fundamentals, work ethic, and a team-first mindset. Our coaching staff has played the game at the professional and elite college level, and brings that experience directly to practice every week.</p>
-        <p>We compete against top-tier competition around the region and push every player to sharpen their skills and grow as a teammate.</p>
-        <div class="stat-row">
-          <div><strong>3</strong><span>Pro &amp; College Coaches</span></div>
-          <div><strong>14U</strong><span>Age Division</span></div>
-          <div><strong>E. Dallas</strong><span>Home Field</span></div>
+      <div class="pillars">
+        <div class="pillar">
+          <span>01</span>
+          <h3>Player development</h3>
+          <p>We care more about who your son becomes than the score of any single game.</p>
+        </div>
+        <div class="pillar">
+          <span>02</span>
+          <h3>Positive coaching</h3>
+          <p>Our coaches don't curse or yell. We lead with accountability and respect.</p>
+        </div>
+        <div class="pillar">
+          <span>03</span>
+          <h3>Community</h3>
+          <p>Many of our families worship together. This is a team of families, not just players.</p>
+        </div>
+        <div class="pillar">
+          <span>04</span>
+          <h3>School prep</h3>
+          <p>Our goal is preparing every player to make his school team, not just win tournaments.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section class="section section-alt" id="coaches">
-    <div class="container">
+    <div class="wrap">
       <div class="section-head">
-        <div class="section-tag">Coaching Staff</div>
-        <h2>Meet Your Coaches</h2>
-        <p>Real professional and elite college experience, brought to the practice field.</p>
+        <h2>Meet the coaches</h2>
+        <p>Dads who show up every week, because these boys are worth showing up for.</p>
       </div>
       <div class="coach-grid">
-
-        <div class="coach-card">
-          <div class="coach-photo">JV<div class="add-photo">Add headshot</div></div>
-          <div class="coach-body">
-            <div class="coach-role">Head Coach</div>
-            <h3>Josh Vander Hey</h3>
-            <span class="coach-tag">Professional &amp; College Catcher</span>
-            <p>Played professionally as a catcher for the Brockton Rox of the Canadian-American Association (independent pro baseball) in 2008. Standout at the University of New Orleans and Texas Wesleyan, earning All-Conference and All-Region honors.</p>
-          </div>
+        <div class="coach">
+          <div class="coach-photo"></div>
+          <h3>Josh</h3>
+          <span class="role">Head Coach</span>
+          <p>Josh has coached these boys since they were eight years old. He believes how you treat people matters more than any scoreboard, and he holds every player to that standard.</p>
+          <span class="cred">Former professional catcher, Brockton Rox</span>
         </div>
-
-        <div class="coach-card">
-          <div class="coach-photo">MK<div class="add-photo">Add headshot</div></div>
-          <div class="coach-body">
-            <div class="coach-role">Assistant Coach</div>
-            <h3>Michael Kraft</h3>
-            <span class="coach-tag">Pro Pitcher &mdash; Toronto Blue Jays Org.</span>
-            <p>Left-handed pitcher drafted by the Toronto Blue Jays in the 37th round of the 2014 MLB Draft out of UTSA. Pitched in the Blue Jays' minor league system through 2015, reaching High-A with the Dunedin Blue Jays.</p>
-          </div>
+        <div class="coach">
+          <div class="coach-photo"></div>
+          <h3>Jesse</h3>
+          <span class="role">Assistant Coach</span>
+          <p>Jesse believes development matters more than trophies. He's focused on the fundamentals and character that carry these players into their school programs and beyond.</p>
         </div>
-
-        <div class="coach-card">
-          <div class="coach-photo">JP<div class="add-photo">Add headshot</div></div>
-          <div class="coach-body">
-            <div class="coach-role">Assistant Coach</div>
-            <h3>Jake Perez</h3>
-            <span class="coach-tag">College &amp; Elite Summer League Outfielder</span>
-            <p>Standout outfielder at Southeastern Oklahoma State and Wayne State College. Competed against top college talent in the Northwoods League (Sheboygan A's) and Texas Collegiate League.</p>
-          </div>
+        <div class="coach">
+          <div class="coach-photo"></div>
+          <h3>Kel</h3>
+          <span class="role">Assistant Coach</span>
+          <p>Kel brings steady, positive energy to every practice. He coaches the way he'd want his own son coached &mdash; with patience, encouragement, and high standards.</p>
         </div>
-
       </div>
+      <p class="coach-note">...and a rotating group of dads who show up every week to throw batting practice, hit fungoes, and keep things running.</p>
     </div>
   </section>
 
-  <section class="section" id="tryouts">
-    <div class="container">
-      <div class="tryouts-box">
+  <section class="section" id="practices">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Open practices</h2>
+        <p>Come see how we coach. No commitment required.</p>
+      </div>
+      <div class="practices-grid">
         <div>
-          <h2>14U Open Practices</h2>
-          <p class="desc">Come compete. Open practices run through July &mdash; wear pants &amp; cleats, and bring all gear and water.</p>
-          <div class="detail-row">
-            <div class="icon">&#128205;</div>
-            <div>Conrad HS Baseball Field<br>7502 Fair Oaks Ave.</div>
+          <div class="practices-list">
+            <h4>JULY DATES</h4>
+            <div class="date-row"><span>Monday</span><span>7/13</span></div>
+            <div class="date-row"><span>Friday</span><span>7/17</span></div>
+            <div class="date-row"><span>Monday</span><span>7/20</span></div>
+            <div class="date-row"><span>Monday</span><span>7/27</span></div>
+            <div class="date-row"><span>Friday</span><span>7/31</span></div>
           </div>
-          <div class="detail-row">
-            <div class="icon">&#128337;</div>
-            <div>7:00pm &ndash; 8:30pm</div>
+          <div style="margin-top:28px;">
+            <p class="info-line"><strong>Time</strong> &mdash; 7:00&ndash;8:30pm</p>
+            <p class="info-line"><strong>Location</strong> &mdash; Conrad HS Baseball Field, 7502 Fair Oaks Ave.</p>
+            <p class="info-line"><strong>Contact</strong> &mdash; Text Coach Josh at 469-994-5433</p>
           </div>
-          <div class="detail-row">
-            <div class="icon">&#9993;&#65039;</div>
-            <div>Text Coach Josh Vander Hey at 469-994-5433 to attend</div>
+          <div class="bring-list">
+            <h4>WHAT TO BRING</h4>
+            <ul>
+              <li>Pants and cleats</li>
+              <li>Glove, bat, and helmet</li>
+              <li>Water</li>
+            </ul>
           </div>
         </div>
-        <div class="dates-card">
-          <h4>July Practice Dates</h4>
-          <div class="date-line"><span>Monday</span><span>7/13</span></div>
-          <div class="date-line"><span>Friday</span><span>7/17</span></div>
-          <div class="date-line"><span>Monday</span><span>7/20</span></div>
-          <div class="date-line"><span>Monday</span><span>7/27</span></div>
-          <div class="date-line"><span>Friday</span><span>7/31</span></div>
-          <div class="contact-cta">Text 469-994-5433 to Reserve Your Spot</div>
+        <div class="map-box">
+          <iframe src="https://www.google.com/maps?q=7502+Fair+Oaks+Ave+Dallas+TX&output=embed" loading="lazy"></iframe>
         </div>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <div class="container footer-grid">
-      <div>
-        <h4>Owls East Dallas Baseball Club</h4>
-        <p>A 14U travel baseball program built on fundamentals, work ethic, and a team-first mindset &mdash; coached by players who've competed at the professional and elite college level.</p>
+  <section class="section section-alt" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>On the field</h2>
+        <p>Practice. The dugout. Instruction. Competition. Celebration.</p>
       </div>
-      <div>
-        <h4>Quick Links</h4>
-        <a href="#about">About</a>
-        <a href="#coaches">Coaches</a>
-        <a href="#tryouts">Tryouts</a>
-      </div>
-      <div>
-        <h4>Contact</h4>
-        <p>Text Coach Josh Vander Hey</p>
-        <p>469-994-5433</p>
-        <p>East Dallas, TX</p>
+      <div class="gallery">
+        <div class="gallery-tile"><span>PRACTICE</span></div>
+        <div class="gallery-tile"><span>DUGOUT</span></div>
+        <div class="gallery-tile"><span>INSTRUCTION</span></div>
+        <div class="gallery-tile"><span>CELEBRATION</span></div>
+        <div class="gallery-tile"><span>COMPETITION</span></div>
       </div>
     </div>
-    <div class="footer-bottom">&copy; 2026 Owls East Dallas Baseball Club. All rights reserved.</div>
+  </section>
+
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-box">
+        <h2>Ready to join us?</h2>
+        <p>Text Coach Josh to register for an open practice.</p>
+        <a href="sms:4699945433" class="btn btn-fill">Text 469-994-5433</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Dallas Owls &middot; dallasowls.com</p>
   </footer>
 
 </body>
