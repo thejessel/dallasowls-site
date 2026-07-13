@@ -38,9 +38,9 @@
   }
   .mark {
     color: var(--white);
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 0.5px;
+    font-weight: 700;
+    font-size: 19px;
+    letter-spacing: 1.5px;
   }
   .navlinks { display: flex; gap: 36px; }
   .navlinks a {
@@ -72,6 +72,13 @@
     margin: 0 auto;
     text-align: center;
     padding: 0 32px;
+  }
+  .hero-wordmark {
+    color: var(--white);
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 16px;
   }
   .eyebrow {
     color: var(--carolina);
@@ -237,6 +244,7 @@
     .gallery { grid-template-columns: repeat(2, 1fr); }
     .navlinks { display: none; }
     .hero h1 { font-size: 32px; }
+    .hero-wordmark { font-size: 24px; letter-spacing: 3px; }
   }
 </style>
 </head>
@@ -257,7 +265,8 @@
   <section class="hero" id="top">
     <div class="pinstripes"></div>
     <div class="hero-inner">
-      <div class="eyebrow">DALLAS OWLS &middot; 14U BASEBALL</div>
+      <div class="hero-wordmark">DALLAS OWLS</div>
+      <div class="eyebrow">14U BASEBALL</div>
       <h1>Preparing players for school baseball.</h1>
       <p>Competitive instruction. Positive coaching. Genuine community.</p>
       <div class="btn-row">
@@ -307,21 +316,35 @@
       <div class="coach-grid">
         <div class="coach">
           <div class="coach-photo"></div>
-          <h3>Josh</h3>
+          <h3>Josh Vander Hey</h3>
           <span class="role">Head Coach</span>
           <p>Josh has coached these boys since they were eight years old. He believes how you treat people matters more than any scoreboard, and he holds every player to that standard.</p>
           <span class="cred">Former professional catcher, Brockton Rox</span>
         </div>
         <div class="coach">
           <div class="coach-photo"></div>
-          <h3>Jesse</h3>
-          <span class="role">Coach</span>
+          <h3>Michael Kraft</h3>
+          <span class="role">Assistant Coach</span>
+          <p>Michael has pitched at every level from Texas sandlots to affiliated pro ball, and he brings that same patience and attention to mechanics to every bullpen with these boys.</p>
+          <span class="cred">Drafted by the Toronto Blue Jays, reached High-A pro ball</span>
+        </div>
+        <div class="coach">
+          <div class="coach-photo"></div>
+          <h3>Jake Perez</h3>
+          <span class="role">Assistant Coach</span>
+          <p>Jake chased every rep he could get through college and elite summer-league ball, and he wants that same competitive drive for these players &mdash; taught with patience, not pressure.</p>
+          <span class="cred">College &amp; summer league outfielder</span>
+        </div>
+        <div class="coach">
+          <div class="coach-photo"></div>
+          <h3>Jesse Leos</h3>
+          <span class="role">Assistant Coach</span>
           <p>Jesse believes development matters more than trophies. He's focused on the fundamentals and character that carry these players into their school programs and beyond.</p>
         </div>
         <div class="coach">
           <div class="coach-photo"></div>
-          <h3>Kel</h3>
-          <span class="role">Coach</span>
+          <h3>Kel Wilpitz</h3>
+          <span class="role">Assistant Coach</span>
           <p>Kel brings steady, positive energy to every practice. He coaches the way he'd want his own son coached &mdash; with patience, encouragement, and high standards.</p>
         </div>
       </div>
